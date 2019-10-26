@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider, Avatar, Text, Button } from 'react-native-elements';
 
-export default function detailScreen() {
+export default function detailScreen(props) {
     return (
         <ThemeProvider>
             <Avatar
@@ -15,6 +15,7 @@ export default function detailScreen() {
             <Button
                 style={{ alignSelf: 'center', top: 400 }}
                 title="Link to Traffic Light"
+                onPress={props.showModalClicked}
             />
         </ThemeProvider>
     );
