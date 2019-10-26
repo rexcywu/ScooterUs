@@ -19,7 +19,7 @@ const titles = {
 };
 
 export default function App() {
-  [currScreen, setCurrScreen] = useState('restaurant_list');
+  [currScreen, setCurrScreen] = useState('login');
 
   function gotoScene(sceneName) {
     setCurrScreen(sceneName);

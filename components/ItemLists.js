@@ -1,7 +1,7 @@
-import { CheckBox, ThemeProvider, Button } from 'react-native-elements'
+import { CheckBox, Button } from 'react-native-elements'
 import React, { useState } from 'react';
 import { ButtonGroup } from 'react-native-elements';
-import {StyleSheet} from 'react-native'
+import { View, StyleSheet } from 'react-native';
 export default function itemLists(props) {
 
   [buttonChecked1, setButtonChecked1] = useState(false);
@@ -79,6 +79,7 @@ export default function itemLists(props) {
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -98,4 +99,3 @@ const styles = StyleSheet.create({
     color: '#FF00FF'
   }
 })
-

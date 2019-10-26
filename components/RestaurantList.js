@@ -43,6 +43,7 @@ export default function restaurantList(props) {
                         title={l.name}
                         subtitle={l.subtitle}
                         bottomDivider
+                        onPress={props.listItemClicked}
                     />
                 ))
             }
