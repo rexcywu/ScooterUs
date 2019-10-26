@@ -1,3 +1,6 @@
+
+
+import { SearchBar, Divider } from 'react-native-elements';
 import React, { useState } from 'react';
 import { ThemeProvider, Header } from 'react-native-elements';
 import LogInScreen from './components/LogInScreen';
@@ -5,6 +8,10 @@ import MainScreen from './components/MainScreen';
 import Pay from './components/Pay';
 import DetailsScreen from './components/DetailsScreen';
 import TrafficlightModal from './components/TrafficLightModal';
+<<<<<<< HEAD
+import ItemLists from './components/ItemLists';
+import ButtonGroup from './components/ButtonGroup';
+=======
 
 import { ActivityIndicator } from 'react-native';
 import { Image } from 'react-native-elements';
@@ -69,12 +76,17 @@ style={{ width: 390, height: 280 }}
  
 
 import OrderComplete from './components/OrderComplete'
+>>>>>>> 284084520a2a780168e89332f891e50fe736ff8d
 
 const titles = {
   login: 'Log In',
   main: 'Information',
   details: 'Details'
 };
+<<<<<<< HEAD
+
+=======
+>>>>>>> 284084520a2a780168e89332f891e50fe736ff8d
 
 export default function App() {
   [currScreen, setCurrScreen] = useState('login');
@@ -99,8 +111,15 @@ export default function App() {
 
   return (
     <ThemeProvider>
+<<<<<<< HEAD
+
+      <ButtonGroup/>
+      <ItemLists/>
+    
+=======
       
       <OrderComplete />
+>>>>>>> 284084520a2a780168e89332f891e50fe736ff8d
     </ThemeProvider>
 
   );
