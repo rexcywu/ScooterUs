@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { ThemeProvider, ButtonGroup} from 'react-native-elements';
+
 export default function buttonGroup() {
    
       
@@ -9,10 +10,10 @@ export default function buttonGroup() {
         return (
     <ThemeProvider>
       <ButtonGroup
-        style={{ alignSelf: 'center', color:'#ffffff'}}
+       underlayColor='#FFCCCC'
         selectedIndex={selectedIndex}
         buttons={buttons}
-        containerStyle={{height: 100}}
+        containerStyle={{height: 50}}
       />
       </ThemeProvider>
     );

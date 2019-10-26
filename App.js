@@ -8,6 +8,7 @@ import OrderComplete from './components/OrderComplete';
 import RestaurantList from './components/RestaurantList';
 import ItemLists from './components/ItemLists';
 
+
 const titles = {
   login: 'Log In',
   busy_picker: 'Are you busy?',
@@ -17,7 +18,7 @@ const titles = {
 };
 
 export default function App() {
-  [currScreen, setCurrScreen] = useState('login');
+  [currScreen, setCurrScreen] = useState('order');
 
   function gotoScene(sceneName) {
     setCurrScreen(sceneName);
