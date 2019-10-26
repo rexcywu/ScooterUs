@@ -1,7 +1,6 @@
 import React from 'react';
 import { Image, ListItem } from 'react-native-elements';
 import { View } from 'react-native';
-import MapView from 'react-native-maps';
 
 export default function restaurantList(props) {
     const list = [
