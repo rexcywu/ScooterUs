@@ -1,6 +1,7 @@
-import { CheckBox, ThemeProvider, Button } from 'react-native-elements'
+import { CheckBox, Button } from 'react-native-elements'
 import React, { useState } from 'react';
 import { ButtonGroup } from 'react-native-elements';
+import { View, StyleSheet } from 'react-native';
 export default function itemLists(props) {
 
   [buttonChecked1, setButtonChecked1] = useState(false);
@@ -79,3 +80,22 @@ export default function itemLists(props) {
   );
 }
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    paddingHorizontal: 10
+  },
+  button: {
+    alignItems: 'center',
+    backgroundColor: '#a297db',
+    padding: 10
+  },
+  countContainer: {
+    alignItems: 'center',
+    padding: 10
+  },
+  countText: {
+    color: '#FF00FF'
+  }
+})
