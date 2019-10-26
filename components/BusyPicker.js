@@ -1,6 +1,5 @@
 import React from 'react';
 import { Avatar, ThemeProvider, Text } from 'react-native-elements';
-import { Ionicons } from '@expo/vector-icons';
 import { View } from 'react-native';
 
 export default function busyPicker(props) {
