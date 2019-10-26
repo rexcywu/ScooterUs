@@ -13,7 +13,7 @@ export default function restaurantMapScreen(props) {
                     width={300}
                 >
                     <Image
-                        source={require('../temp.png')}
+                        source={require('../map.png')}
                         style={{ width: '100%', height: '100%' }}
                     />
                 </Tooltip>
