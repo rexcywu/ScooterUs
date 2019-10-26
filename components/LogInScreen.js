@@ -16,6 +16,7 @@ export default function loginScreen(props) {
             <Input
                 label="password"
                 containerStyle={{ alignSelf: 'center', top: 175, width: 350 }}
+                secureTextEntry={true}
             />
             <Button
                 title="Log In"

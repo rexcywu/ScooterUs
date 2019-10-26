@@ -21,6 +21,12 @@ export default function itemLists(props) {
 
   function updateIndex(index) {
     setSelectedIndex(index);
+    setButtonChecked1(false);
+    setButtonChecked2(false);
+    setButtonChecked3(false);
+    setButtonChecked4(false);
+    setButtonChecked5(false);
+    setButtonChecked6(false);
   }
 
   return (

@@ -42,16 +42,15 @@ export default function App() {
   } else if (currScreen === 'pay') {
     screen = <Pay orderComplete={() => gotoScene('order_complete')} />
   } else if (currScreen === 'order_complete') {
-    screen = <OrderComplete />
+    screen = <OrderComplete homeClicked={() => gotoScene('restaurant_list')} />
   }
 
   return (
     <ThemeProvider>
       <ImageBackground source={require('./bg.png')} style={{ width: '100%', height: '100%' }}>
-        {currScreen === 'pay' || currScreen === 'busy_picker' ?
+        {currScreen === 'start' || currScreen === 'pay' || currScreen === 'busy_picker' ?
           null :
           <Header
-            leftComponent={currScreen === 'order_complete' ? { icon: 'home', onPress: () => gotoScene('restaurant_list') } : null}
             centerComponent={{ text: titles[currScreen], style: { color: '#ffffff', fontSize: 28 } }}
           />
         }
