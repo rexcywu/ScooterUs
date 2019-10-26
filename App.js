@@ -4,15 +4,17 @@ import LogInScreen from './components/LogInScreen';
 import MainScreen from './components/MainScreen';
 import DetailsScreen from './components/DetailsScreen';
 import TrafficlightModal from './components/TrafficLightModal';
+import RestaurantMapScreen from './components/RestaurantMapScreen';
 
 const titles = {
   login: 'Log In',
   main: 'Information',
-  details: 'Details'
+  details: 'Details',
+  restaurant_map: 'Restaurant'
 };
 
 export default function App() {
-  [currScreen, setCurrScreen] = useState('login');
+  [currScreen, setCurrScreen] = useState('restaurant_map');
   [modalShow, setModalShow] = useState(false);
 
   function gotoScene(sceneName) {
@@ -30,6 +32,8 @@ export default function App() {
     screen = <MainScreen showModalClicked={() => setTrafficLightHandler(true)} />;
   } else if (currScreen === 'details') {
     screen = <DetailsScreen />;
+  } else if (currScreen === 'restaurant_map') {
+    screen = <RestaurantMapScreen />
   }
 
   return (

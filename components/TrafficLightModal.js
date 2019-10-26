@@ -1,7 +1,6 @@
 import React from 'react';
 import { Overlay } from 'react-native-elements';
 import { Button } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import { View } from 'react-native';
 import { Avatar } from 'react-native-elements';
 
