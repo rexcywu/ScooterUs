@@ -43,12 +43,12 @@ export default function trafficLightModal() {
 <View style={{flexDirection: 'row'}} containerStyle={{alignSelf: 'center'}}>
 <Button
   title="yes"
-  containerStyle={{ top: 160 , width: 100}}
+  containerStyle={{ top: 170 , width: 100}}
 />
 
 <Button
   title="no"
-  containerStyle={{  top: 160, width: 100}}
+  containerStyle={{  top: 170, width: 100}}
 /></View>
          </Overlay>
      );
