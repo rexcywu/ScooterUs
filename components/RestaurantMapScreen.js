@@ -13,7 +13,7 @@ export default function restaurantMapScreen(props) {
                 />
 
             </View>
-            <Text style={{ margin: 25, fontSize: 20, textAlign: 'center', color: '#1111ff' }}>An open kitchen supports the chef-driven, made-from-scratch dining experience in a comfortable relaxed and warm setting serving quality Mexican & Tex-Mex Cuisine with a focus on fresh ingredients, bold flavours and eye-catching made to order items.</Text>
+            <Text style={{ margin: 25, fontSize: 20, textAlign: 'center', color: 'black' }}>An open kitchen supports the chef-driven, made-from-scratch dining experience in a comfortable relaxed and warm setting serving quality Mexican & Tex-Mex Cuisine with a focus on fresh ingredients, bold flavours and eye-catching made to order items.</Text>
             <View style={{ flexDirection: 'row', height: '25%', alignSelf: 'center' }}>
 
                 <Button

@@ -50,9 +50,11 @@ export default function App() {
       <ImageBackground source={require('./bg.png')} style={{ width: '100%', height: '100%' }}>
         {currScreen === 'start' || currScreen === 'pay' || currScreen === 'busy_picker' ?
           null :
-          <Header
-            centerComponent={{ text: titles[currScreen], style: { color: '#ffffff', fontSize: 28 } }}
-          />
+          <ThemeProvider theme={{ colors: { primary: '#aa1242' } }}>
+            <Header
+              centerComponent={{ text: titles[currScreen], style: { color: '#ffffff', fontSize: 28 } }}
+            />
+          </ThemeProvider>
         }
         {screen}
       </ImageBackground>
