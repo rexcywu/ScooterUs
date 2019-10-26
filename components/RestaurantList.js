@@ -28,6 +28,7 @@ export default function restaurantList(props) {
           avatar_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/1200px-Starbucks_Corporation_Logo_2011.svg.png',
           subtitle: 'expensive'
         },
+<<<<<<< HEAD
           ];
       
         return (
@@ -37,6 +38,17 @@ export default function restaurantList(props) {
     style={{ width: 390, height: 280 }}
     />    
               {
+=======
+    ];
+
+    return (
+        <View>
+            <Image
+                source={require('../map.png')}
+                style={{ width: 390, height: 280 }}
+            />
+            {
+>>>>>>> dd75e460a95ccf986505a8400b29332422d6dc7d
                 list.map((l, i) => (
                   <ListItem
                     key={i}
