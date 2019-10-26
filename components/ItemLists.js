@@ -2,6 +2,7 @@ import { CheckBox, Button, ThemeProvider } from 'react-native-elements'
 import React, { useState } from 'react';
 import { ButtonGroup } from 'react-native-elements';
 import { View, StyleSheet } from 'react-native';
+import { Avatar, ThemeProvider, Text } from 'react-native-elements';
 export default function itemLists(props) {
 
   [buttonChecked1, setButtonChecked1] = useState(false);
