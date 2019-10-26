@@ -14,7 +14,7 @@ const titles = {
   login: 'Log In',
   busy_picker: 'Are you busy?',
   restaurant_list: 'Restaurants',
-  restaurant_map: 'Location',
+  restaurant_map: 'Details',
   order: 'Order'
 };
 

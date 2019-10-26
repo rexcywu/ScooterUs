@@ -2,7 +2,6 @@ import { CheckBox, Button, ThemeProvider } from 'react-native-elements'
 import React, { useState } from 'react';
 import { ButtonGroup } from 'react-native-elements';
 import { View, StyleSheet } from 'react-native';
-import { Avatar, ThemeProvider, Text } from 'react-native-elements';
 export default function itemLists(props) {
 
   [buttonChecked1, setButtonChecked1] = useState(false);
@@ -11,10 +10,14 @@ export default function itemLists(props) {
   [buttonChecked4, setButtonChecked4] = useState(false);
   [buttonChecked5, setButtonChecked5] = useState(false);
   [buttonChecked6, setButtonChecked6] = useState(false);
-  [buttonChecked7, setButtonChecked7] = useState(false);
   [selectedIndex, setSelectedIndex] = useState(0);
 
   const buttons = ['Main Dish', 'Snacks', 'Drinks'];
+  const titles = [
+    ['$92 PASTOR TACOS', '$56 GREEN SALSA', '$88 STREET CORN', '$98 CAESAR SALAD', '$78 SOFT TACOS', '$52 CHICKEN N LIME SOUP'],
+    ['$56 GREEN SALSA', '$88 STREET CORN', '$92 PASTOR TACOS', '$52 CHICKEN N LIME SOUP', '$98 CAESAR SALAD', '$78 SOFT TACOS'],
+    ['$78 SOFT TACOS', '$56 GREEN SALSA', '$88 STREET CORN', '$98 CAESAR SALAD', '$92 PASTOR TACOS', '$52 CHICKEN N LIME SOUP'],
+  ];
 
   function updateIndex(index) {
     setSelectedIndex(index);
@@ -32,44 +35,38 @@ export default function itemLists(props) {
 
       <CheckBox
         checked={buttonChecked1}
-        title='$92 PASTOR TACOS'
+        title={titles[selectedIndex][0]}
         onPress={() => { setButtonChecked1(!buttonChecked1) }}
       />
 
       <CheckBox
         checked={buttonChecked2}
-        title='$56 GREEN SALSA'
+        title={titles[selectedIndex][1]}
         onPress={() => { setButtonChecked2(!buttonChecked2) }}
       />
 
       <CheckBox
         checked={buttonChecked3}
-        title='$88 STREET CORN'
+        title={titles[selectedIndex][2]}
         onPress={() => { setButtonChecked3(!buttonChecked3) }}
       />
 
       <CheckBox
         checked={buttonChecked4}
-        title='$98 CAESAR SALAD'
+        title={titles[selectedIndex][3]}
         onPress={() => { setButtonChecked4(!buttonChecked4) }}
       />
 
       <CheckBox
         checked={buttonChecked5}
-        title='$78 SOFT TACOS '
+        title={titles[selectedIndex][4]}
         onPress={() => { setButtonChecked5(!buttonChecked5) }}
       />
 
       <CheckBox
         checked={buttonChecked6}
-        title='$52 CHICKEN N LIME SOUP'
+        title={titles[selectedIndex][5]}
         onPress={() => { setButtonChecked6(!buttonChecked6) }}
-      />
-
-      <CheckBox
-        checked={buttonChecked7}
-        title='Click Here to Remove This Item'
-        onPress={() => { setButtonChecked7(!buttonChecked7) }}
       />
 
       <ThemeProvider theme={{ colors: { primary: '#a297db' } }}>
