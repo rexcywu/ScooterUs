@@ -1,4 +1,4 @@
-import { CheckBox, Button } from 'react-native-elements'
+import { CheckBox, Button, ThemeProvider } from 'react-native-elements'
 import React, { useState } from 'react';
 import { ButtonGroup } from 'react-native-elements';
 import { View, StyleSheet } from 'react-native';
@@ -71,10 +71,12 @@ export default function itemLists(props) {
         onPress={() => { setButtonChecked7(!buttonChecked7) }}
       />
 
-      <Button style={styles.button}
-        title="Place Order"
-        onPress={props.orderPlaced}
-      />
+      <ThemeProvider theme={{ colors: { primary: '#a297db' } }}>
+        <Button style={styles.button}
+          title="Place Order"
+          onPress={props.orderPlaced}
+        />
+      </ThemeProvider>
 
     </View>
   );
@@ -89,7 +91,8 @@ const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
     backgroundColor: '#a297db',
-    padding: 10
+    padding: 10,
+    margin: 15
   },
   countContainer: {
     alignItems: 'center',

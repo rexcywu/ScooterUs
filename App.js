@@ -43,10 +43,11 @@ export default function App() {
   }
 
   return (
-    <View style={{ backgroundColor: '#acd6ff', width: '100%', height: '100%' }}>
-      {currScreen === 'pay' || currScreen === 'busy_picker' ? null : <Header centerComponent={{ text: titles[currScreen], style: { color: '#ffffff', fontSize: 28 } }} />}
-      {screen}
-    </View>
-
+    <ThemeProvider>
+      <View style={{ backgroundColor: '#acd6ff', width: '100%', height: '100%' }}>
+        {currScreen === 'pay' || currScreen === 'busy_picker' ? null : <Header centerComponent={{ text: titles[currScreen], style: { color: '#ffffff', fontSize: 28 } }} />}
+        {screen}
+      </View>
+    </ThemeProvider>
   );
 }
