@@ -19,7 +19,7 @@ export default function itemLists(props) {
   }
 
   return (
-    <ThemeProvider>
+    <View style={styles.container}>
 
       <ButtonGroup
         selectedIndex={selectedIndex}
@@ -70,13 +70,31 @@ export default function itemLists(props) {
         onPress={() => { setButtonChecked7(!buttonChecked7) }}
       />
 
-      <Button
+      <Button style={styles.button}
         title="Place Order"
-        containerStyle={{ margin: 25 }}
         onPress={props.orderPlaced}
       />
 
-    </ThemeProvider>
+    </View>
   );
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    paddingHorizontal: 10
+  },
+  button: {
+    alignItems: 'center',
+    backgroundColor: '#a297db',
+    padding: 10
+  },
+  countContainer: {
+    alignItems: 'center',
+    padding: 10
+  },
+  countText: {
+    color: '#FF00FF'
+  }
+})
 
