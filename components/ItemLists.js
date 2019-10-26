@@ -1,6 +1,10 @@
 import { CheckBox, ThemeProvider, Button } from 'react-native-elements'
 import React from 'react';
 import { ButtonGroup} from 'react-native-elements';
+import {
+  StyleSheet,
+  View,
+} from 'react-native'
 export default function itemLists(props) {
    
       
@@ -9,7 +13,7 @@ export default function itemLists(props) {
   
   
   return (
-    <ThemeProvider>
+    <View style={styles.container}>
 
     <ButtonGroup
         selectedIndex={selectedIndex}
@@ -45,13 +49,31 @@ export default function itemLists(props) {
         title='Click Here to Remove This Item'
       />
 
-      <Button
+      <Button style={styles.button}
         title="Place Order"
-        containerStyle={{ margin: 25 }}
         onPress={props.orderPlaced}
       />
 
-    </ThemeProvider>
+    </View>
   );
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    paddingHorizontal: 10
+  },
+  button: {
+    alignItems: 'center',
+    backgroundColor: '#a297db',
+    padding: 10
+  },
+  countContainer: {
+    alignItems: 'center',
+    padding: 10
+  },
+  countText: {
+    color: '#FF00FF'
+  }
+})
 
