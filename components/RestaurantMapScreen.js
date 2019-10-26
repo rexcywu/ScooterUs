@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemeProvider, Tooltip, Image, Text, Button } from 'react-native-elements';
 import { View } from 'react-native';
 
-export default function restaurantMapScreen() {
+export default function restaurantMapScreen(props) {
     return (
         <ThemeProvider>
             <View style={{ width: '100%', height: '60%' }}>
@@ -27,6 +27,7 @@ export default function restaurantMapScreen() {
                 <Button
                     title="Order"
                     containerStyle={{ marginHorizontal: 30, marginVertical: 60, width: 100 }}
+                    onPress={props.orderClicked}
                 />
             </View>
         </ThemeProvider>
