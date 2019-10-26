@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ThemeProvider, Header } from 'react-native-elements';
 import LogInScreen from './components/LogInScreen';
 import MainScreen from './components/MainScreen';
+import Pay from './components/Pay';
 import DetailsScreen from './components/DetailsScreen';
 import TrafficlightModal from './components/TrafficLightModal';
 
@@ -34,15 +35,8 @@ export default function App() {
 
   return (
     <ThemeProvider>
-      <Header
-        centerComponent={{ text: titles[currScreen], style: { color: '#ffffff', fontSize: 22 } }}
-      />
-      {screen}
-      <TrafficlightModal
-        visible={modalShow}
-        cancelClicked={() => setTrafficLightHandler(false)}
-        toDetails={() => { gotoScene('details'); setTrafficLightHandler(false) }}
-      />
+      
+      <Pay />
     </ThemeProvider>
   );
 }
