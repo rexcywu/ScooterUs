@@ -7,6 +7,7 @@ export default function loginScreen(props) {
             <Avatar
                 rounded size="xlarge"
                 containerStyle={{ alignSelf: 'center', top: 100 }}
+                source={{ uri: 'https://techcrunch.com/wp-content/uploads/2014/10/anonymity.jpg?w=730&crop=1' }}
             />
             <Input
                 label="username"

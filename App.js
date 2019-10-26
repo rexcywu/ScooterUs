@@ -7,7 +7,8 @@ import RestaurantMapScreen from './components/RestaurantMapScreen';
 import OrderComplete from './components/OrderComplete';
 import RestaurantList from './components/RestaurantList';
 import ItemLists from './components/ItemLists';
-import { View } from 'react-native';
+import StartScreen from './components/startScreen';
+import { View, ImageBackground } from 'react-native';
 
 
 const titles = {
@@ -19,14 +20,16 @@ const titles = {
 };
 
 export default function App() {
-  [currScreen, setCurrScreen] = useState('login');
+  [currScreen, setCurrScreen] = useState('start');
 
   function gotoScene(sceneName) {
     setCurrScreen(sceneName);
   }
 
   let screen;
-  if (currScreen === 'login') {
+  if (currScreen === 'start') {
+    screen = <StartScreen startClicked={() => gotoScene('login')} />
+  } else if (currScreen === 'login') {
     screen = <LogInScreen loginClicked={() => gotoScene('busy_picker')} />;
   } else if (currScreen === 'busy_picker') {
     screen = <BusyPicker yesClicked={() => gotoScene('restaurant_list')} />;
@@ -44,10 +47,17 @@ export default function App() {
 
   return (
     <ThemeProvider>
-      <View style={{ backgroundColor: '#acd6ff', width: '100%', height: '100%' }}>
-        {currScreen === 'pay' || currScreen === 'busy_picker' ? null : <Header centerComponent={{ text: titles[currScreen], style: { color: '#ffffff', fontSize: 28 } }} />}
+      <ImageBackground source={require('./bg.png')} style={{ width: '100%', height: '100%' }}>
+        {currScreen === 'pay' || currScreen === 'busy_picker' ?
+          null :
+          <Header
+            leftComponent={currScreen === 'order_complete' ? { icon: 'home', onPress: () => gotoScene('restaurant_list') } : null}
+            centerComponent={{ text: titles[currScreen], style: { color: '#ffffff', fontSize: 28 } }}
+          />
+        }
         {screen}
-      </View>
+      </ImageBackground>
+
     </ThemeProvider>
   );
 }

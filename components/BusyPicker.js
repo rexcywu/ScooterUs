@@ -5,7 +5,7 @@ import { View } from 'react-native';
 export default function busyPicker(props) {
   return (
     <ThemeProvider>
-      <Text h1 h1Style={{ alignSelf: 'center', top: '15%' }}>Are you busy?</Text>
+      <Text h1 h1Style={{ alignSelf: 'center', top: '15%' }}>In a Hurry?</Text>
       <View style={{ flexDirection: 'row', alignSelf: 'center', top: '50%' }}>
         <Avatar
           icon={{ name: 'check', color: 'black' }}
