@@ -33,7 +33,7 @@ export default function restaurantList(props) {
     return (
         <View>
             <Image
-                source={{ uri: 'http://www.dituxin.com/uploads/allimg/160417/1-16041F91503440.jpg' }}
+                source={require('../map.png')}
                 style={{ width: 390, height: 280 }}
             />
             {

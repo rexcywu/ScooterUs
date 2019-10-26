@@ -7,6 +7,7 @@ import RestaurantMapScreen from './components/RestaurantMapScreen';
 import OrderComplete from './components/OrderComplete';
 import RestaurantList from './components/RestaurantList';
 import ItemLists from './components/ItemLists';
+import { View } from 'react-native';
 
 
 const titles = {
@@ -18,7 +19,11 @@ const titles = {
 };
 
 export default function App() {
+<<<<<<< HEAD
   [currScreen, setCurrScreen] = useState('order');
+=======
+  [currScreen, setCurrScreen] = useState('order_complete');
+>>>>>>> eef16ebf891557da2224abe4bf5f222dd4128921
 
   function gotoScene(sceneName) {
     setCurrScreen(sceneName);
@@ -42,10 +47,10 @@ export default function App() {
   }
 
   return (
-    <ThemeProvider>
+    <View style={{ backgroundColor: '#acd6ff', width: '100%', height: '100%' }}>
       {currScreen == 'pay' ? null : <Header centerComponent={{ text: titles[currScreen], style: { color: '#ffffff', fontSize: 28 } }} />}
       {screen}
-    </ThemeProvider>
+    </View>
 
   );
 }
