@@ -5,6 +5,7 @@ import MainScreen from './components/MainScreen';
 import Pay from './components/Pay';
 import DetailsScreen from './components/DetailsScreen';
 import TrafficlightModal from './components/TrafficLightModal';
+import OrderComplete from './components/OrderComplete'
 
 const titles = {
   login: 'Log In',
@@ -36,7 +37,7 @@ export default function App() {
   return (
     <ThemeProvider>
       
-      <Pay />
+      <OrderComplete />
     </ThemeProvider>
   );
 }
