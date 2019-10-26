@@ -1,5 +1,6 @@
 import React from 'react';
-import { ThemeProvider, Avatar } from 'react-native-elements';
+import { ThemeProvider, Image, Avatar } from 'react-native-elements';
+import image from '../assets/fridge.jpg';
 
 export default function detailScreen() {
     return (
