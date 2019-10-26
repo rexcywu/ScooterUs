@@ -9,6 +9,7 @@ import RestaurantList from './components/RestaurantList';
 import ItemLists from './components/ItemLists';
 import { View } from 'react-native';
 
+
 const titles = {
   login: 'Log In',
   busy_picker: 'Are you busy?',

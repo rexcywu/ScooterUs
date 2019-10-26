@@ -1,33 +1,44 @@
 import { CheckBox, ThemeProvider, Button } from 'react-native-elements'
 import React from 'react';
-
+import { ButtonGroup} from 'react-native-elements';
 export default function itemLists(props) {
+   
+      
+  const buttons = ['Main Dish', 'Snacks','Drinks'];
+  const  selectedIndex = 0;
+  
+  
   return (
     <ThemeProvider>
 
-
-      <CheckBox
-        title='Enter something!'
+    <ButtonGroup
+        selectedIndex={selectedIndex}
+        buttons={buttons}
+        containerStyle={{height: 100}}
       />
 
       <CheckBox
-        title='Enter something!'
+        title='$92 PASTOR TACOS'
       />
 
       <CheckBox
-        title='Enter something!'
+        title='$56 GREEN SALSA'
       />
 
       <CheckBox
-        title='Enter something!'
+        title='$88 STREET CORN'
       />
 
       <CheckBox
-        title='Enter something!'
+        title='$98 CAESAR SALAD'
       />
 
       <CheckBox
-        title='Enter something!'
+        title='$78 SOFT TACOS '
+      />
+
+      <CheckBox
+        title='$52 CHICKEN N LIME SOUP'
       />
 
       <CheckBox
