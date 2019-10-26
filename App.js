@@ -18,7 +18,7 @@ const titles = {
 };
 
 export default function App() {
-  [currScreen, setCurrScreen] = useState('login');
+  [currScreen, setCurrScreen] = useState('order_complete');
 
   function gotoScene(sceneName) {
     setCurrScreen(sceneName);
