@@ -13,9 +13,14 @@ export default function restaurantMapScreen(props) {
                 />
 
             </View>
-            <Text style={{ margin: 25, fontSize: 20, textAlign: 'center', color: 'black' }}>An open kitchen supports the chef-driven, made-from-scratch dining experience in a comfortable relaxed and warm setting serving quality Mexican & Tex-Mex Cuisine with a focus on fresh ingredients, bold flavours and eye-catching made to order items.</Text>
+            <Text style={{ margin: 30, fontSize: 24, textAlign: 'center', color: 'black', fontFamily: 'Palatino' }}>Dining in a comfortable relaxed and warm setting serving quality Mexican Cuisine</Text>
             <View style={{ flexDirection: 'row', height: '25%', alignSelf: 'center' }}>
-                <ThemeProvider theme={{ colors: { primary: '#aa1242' } }}>
+                <ThemeProvider style={{ flexDirection: 'row', alignSelf: 'center' }} theme={{ colors: { primary: '#aa1242' } }}>
+                    <Button
+                        title="Back"
+                        containerStyle={{ marginHorizontal: 30, marginVertical: 60, width: 100 }}
+                        onPress={props.backClicked}
+                    />
                     <Button
                         title="Order"
                         containerStyle={{ marginHorizontal: 30, marginVertical: 60, width: 100 }}
