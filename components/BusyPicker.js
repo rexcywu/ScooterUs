@@ -1,12 +1,18 @@
 import React from 'react';
-import { Avatar, ThemeProvider, Text } from 'react-native-elements';
+import { Avatar, Image,ThemeProvider, Text } from 'react-native-elements';
 import { View } from 'react-native';
 
 export default function busyPicker(props) {
   return (
     <ThemeProvider>
-      <Text h1 h1Style={{ alignSelf: 'center', top: '35%' }}>In a Hurry?</Text>
-      <View style={{ flexDirection: 'row', alignSelf: 'center', top: '90%' }}>
+      <Text h1 h1Style={{ alignSelf: 'center', top: '20%' }}>In a Hurry?</Text>
+      <View style={{width: '50%', height: '50%', top: '30%', alignContent: 'center'}}>
+      <Image
+                    source={require('../hurry-businessman.png')}
+                    style={{width: '50%', height: '50%', alignSelf: 'center'}}
+                />
+                </View>
+      <View style={{ flexDirection: 'row', alignSelf: 'center', top: '30%' }}>
         <Avatar
           icon={{ name: 'check', color: 'black' }}
           rounded
