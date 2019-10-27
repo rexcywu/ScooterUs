@@ -13,7 +13,7 @@ export default function restaurantMapScreen(props) {
                 />
 
             </View>
-            <Text style={{ margin: 30, fontSize: 24, textAlign: 'center', color: 'black', fontFamily: 'Palatino' }}>Dining in a comfortable relaxed and warm setting serving quality Mexican Cuisine</Text>
+            <Text style={{ margin: 30, fontSize: 24, textAlign: 'center', color: 'black', fontFamily: 'Palatino' }}>Best Mexican Cuisine in Cyberport</Text>
             <View style={{ flexDirection: 'row', height: '25%', alignSelf: 'center' }}>
                 <ThemeProvider style={{ flexDirection: 'row', alignSelf: 'center' }} theme={{ colors: { primary: '#aa1242' } }}>
                     <Button
