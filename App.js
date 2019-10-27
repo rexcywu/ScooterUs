@@ -20,7 +20,7 @@ const titles = {
 };
 
 export default function App() {
-  [currScreen, setCurrScreen] = useState('busy_picker');
+  [currScreen, setCurrScreen] = useState('login');
 
   function gotoScene(sceneName) {
     setCurrScreen(sceneName);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider, Input, Button, Avatar } from 'react-native-elements';
+import { ThemeProvider, Input, Button, Avatar, fontFamily } from 'react-native-elements';
 
 export default function loginScreen(props) {
     return (
@@ -10,12 +10,12 @@ export default function loginScreen(props) {
                 source={{ uri: 'https://techcrunch.com/wp-content/uploads/2014/10/anonymity.jpg?w=730&crop=1' }}
             />
             <Input
-                label="username"
+                label="Username"
                 containerStyle={{ alignSelf: 'center', top: 150, width: 350 }}
             />
             <Input
-                label="password"
-                containerStyle={{ alignSelf: 'center', top: 175, width: 350 }}
+                label="Password"
+                containerStyle={{ alignSelf: 'center', top: 175, width: 350}}
                 secureTextEntry={true}
             />
             <ThemeProvider theme={{ colors: { primary: '#aa1242' } }}>
