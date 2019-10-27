@@ -8,17 +8,19 @@ export default function pay(props) {
             <Text h3 h3Style={{ fontFamily: 'Papyrus', top: '7%', fontSize: 40, textAlign: "center", alignSelf: 'center', color: '#FF69B4' }}>Thank you for your order !</Text>
             <Text h4 h4Style={{ top: '15%', fontSize: 20, textAlign: 'center', alignSelf: 'center', color: '#ff6666' }}>Rate Your Experience</Text>
             <Text h3 h3Style={{ fontFamily: 'Papyrus', top: '35%', fontSize: 40, textAlign: "center", alignSelf: 'center', color: '#FF69B4' }}>Enjoy your day !</Text>
-            <TouchableOpacity onPress={props.homeClicked}>
-                <Avatar
-                    icon={{ name: 'home', color: '#aa1242' }}
-                    size='large'
-                    rounded
-                    overlayContainerStyle={{ bottom: '-550%', left: '230%', backgroundColor: 'white' }}
-                />
-            </TouchableOpacity>
+
+            <Avatar
+                icon={{ name: 'home', color: '#aa1242' }}
+                size='large'
+                rounded
+                onPress={props.homeClicked}
+                overlayContainerStyle={{ bottom: '-550%', left: '230%', backgroundColor: 'white' }}
+            />
+
             <AirbnbRating
                 reviews={["", "", "", "", ""]}
                 overlayContainerStyle={{ top: '20%' }}
+                defaultRating={0}
             />
         </ThemeProvider>
     );
