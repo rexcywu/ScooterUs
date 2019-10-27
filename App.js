@@ -20,7 +20,7 @@ const titles = {
 };
 
 export default function App() {
-  [currScreen, setCurrScreen] = useState('login');
+  [currScreen, setCurrScreen] = useState('start');
 
   function gotoScene(sceneName) {
     setCurrScreen(sceneName);
