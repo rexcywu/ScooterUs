@@ -18,12 +18,14 @@ export default function loginScreen(props) {
                 containerStyle={{ alignSelf: 'center', top: 175, width: 350 }}
                 secureTextEntry={true}
             />
-            <Button
-                title="Log In"
-                raised
-                containerStyle={{ alignSelf: 'center', top: 250, width: 150 }}
-                onPress={props.loginClicked}
-            />
-        </ThemeProvider>
+            <ThemeProvider theme={{ colors: { primary: '#aa1242' } }}>
+                <Button
+                    title="Log In"
+                    raised
+                    containerStyle={{ alignSelf: 'center', top: 250, width: 150 }}
+                    onPress={props.loginClicked}
+                />
+            </ThemeProvider>
+        </ThemeProvider >
     );
 }

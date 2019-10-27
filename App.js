@@ -36,9 +36,9 @@ export default function App() {
   } else if (currScreen === 'restaurant_list') {
     screen = <RestaurantList listItemClicked={() => gotoScene('restaurant_map')} />;
   } else if (currScreen === 'restaurant_map') {
-    screen = <RestaurantMapScreen orderClicked={() => gotoScene('order')} />
+    screen = <RestaurantMapScreen orderClicked={() => gotoScene('order')} backClicked={() => gotoScene('restaurant_list')} />
   } else if (currScreen === 'order') {
-    screen = <ItemLists orderPlaced={() => gotoScene('pay')} />
+    screen = <ItemLists orderPlaced={() => gotoScene('pay')} backClicked={() => gotoScene('restaurant_map')} />
   } else if (currScreen === 'pay') {
     screen = <Pay orderComplete={() => gotoScene('order_complete')} />
   } else if (currScreen === 'order_complete') {
@@ -50,9 +50,11 @@ export default function App() {
       <ImageBackground source={require('./bg.png')} style={{ width: '100%', height: '100%' }}>
         {currScreen === 'start' || currScreen === 'pay' || currScreen === 'busy_picker' ?
           null :
-          <Header
-            centerComponent={{ text: titles[currScreen], style: { color: '#ffffff', fontSize: 28 } }}
-          />
+          <ThemeProvider theme={{ colors: { primary: '#aa1242' } }}>
+            <Header
+              centerComponent={{ text: titles[currScreen], style: { color: '#ffffff', fontSize: 28 } }}
+            />
+          </ThemeProvider>
         }
         {screen}
       </ImageBackground>

@@ -31,13 +31,14 @@ export default function itemLists(props) {
 
   return (
     <View style={styles.container}>
-
-      <ButtonGroup
-        selectedIndex={selectedIndex}
-        buttons={buttons}
-        containerStyle={{ height: 100 }}
-        onPress={updateIndex}
-      />
+      <ThemeProvider theme={{ colors: { primary: '#aa1242' } }}>
+        <ButtonGroup
+          selectedIndex={selectedIndex}
+          buttons={buttons}
+          containerStyle={{ height: 100 }}
+          onPress={updateIndex}
+        />
+      </ThemeProvider>
 
       <CheckBox
         checked={buttonChecked1}
@@ -75,13 +76,18 @@ export default function itemLists(props) {
         onPress={() => { setButtonChecked6(!buttonChecked6) }}
       />
 
-      <ThemeProvider theme={{ colors: { primary: '#a297db' } }}>
-        <Button style={styles.button}
-          title="Place Order"
-          onPress={props.orderPlaced}
-        />
-      </ThemeProvider>
-
+      <View style={{ flexDirection: 'row', height: '25%', alignSelf: 'center' }}>
+        <ThemeProvider theme={{ colors: { primary: '#aa1242' } }}>
+          <Button style={styles.button}
+            title="Back"
+            onPress={props.backClicked}
+          />
+          <Button style={styles.button}
+            title="Place Order"
+            onPress={props.orderPlaced}
+          />
+        </ThemeProvider>
+      </View>
     </View>
   );
 }
@@ -94,7 +100,6 @@ const styles = StyleSheet.create({
   },
   button: {
     alignItems: 'center',
-    backgroundColor: '#a297db',
     padding: 10,
     margin: 15
   },
