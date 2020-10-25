@@ -10,7 +10,7 @@ export default function buttonGroup() {
   return (
     <ThemeProvider>
       <ButtonGroup
-        underlayColor='#FFCCCC'
+        underlayColor='#043b82'
         selectedIndex={selectedIndex}
         buttons={buttons}
         containerStyle={{ height: 50 }}

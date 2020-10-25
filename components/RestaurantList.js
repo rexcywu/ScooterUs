@@ -5,35 +5,27 @@ import { View } from 'react-native';
 export default function restaurantList(props) {
     const list = [
         {
-            name: 'El Charro',
-            avatar_url: 'http://delaneys.com.hk/wp-content/uploads/2015/11/Logo_E_001.png',
-            subtitle: 'A chef-driven open kitchen.'
+            name: 'Gogoro',
+            avatar_url: 'https://i.imgur.com/SCFe59u.jpeg',
+            subtitle: 'ABC-111                       $280'
         },
         {
-            name: "Delaney's",
-            avatar_url: 'https://lh5.googleusercontent.com/p/AF1QipNczegB18LHeeIEZjMJgELUSKDI7Z2Vt0TLTlUk=w426-h240-k-no',
-            subtitle: 'French Ambrosia.'
+            name: "SYM",
+            avatar_url: 'https://i.imgur.com/SCFe59u.jpeg',
+            subtitle: 'ABC-222                       $250'
         },
         {
-            name: 'Umami',
-            avatar_url: 'https://lh5.googleusercontent.com/p/AF1QipNKF9gSBInCnGL11Rxj6m895nM5gaht7BdW_xYv=w408-h279-k-no',
-            subtitle: 'Japanese delicacy.'
-        }, {
-            name: 'DiVino',
-            avatar_url: 'https://lh5.googleusercontent.com/p/AF1QipM7XeULzGb-2YT8DKaYkxW4-ttZBUMjzr9QmOdP=w408-h305-k-no',
-            subtitle: 'Fine wine & bears.'
-        }, {
-            name: 'Wildfire',
-            avatar_url: 'https://s3.amazonaws.com/bucket2.wildfirerestaurant.com/wp-content/uploads/wildfire-101.jpg',
-            subtitle: 'A fantastic American steak house.'
-        },
+            name: 'SYM',
+            avatar_url: 'https://i.imgur.com/SCFe59u.jpeg',
+            subtitle: 'ABC-333                       $250'
+        }, 
     ];
 
     return (
         <View>
             <Image
                 source={require('../map.png')}
-                style={{ width: 500, height: 450 }}
+                style={{ width: 400, height: 450 }}
             />
             {
                 list.map((l, i) => (

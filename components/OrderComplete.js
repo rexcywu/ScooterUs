@@ -1,27 +1,17 @@
 import React from 'react';
 import { Avatar, ThemeProvider, Text, AirbnbRating } from 'react-native-elements';
-import { TouchableOpacity } from 'react-native';
+import { View } from 'react-native';
 
 export default function pay(props) {
     return (
         <ThemeProvider>
-            <Text h3 h3Style={{ fontFamily: 'Papyrus', top: '7%', fontSize: 40, textAlign: "center", alignSelf: 'center', color: '#FF69B4' }}>Thank you for your order !</Text>
-            <Text h4 h4Style={{ top: '15%', fontSize: 20, textAlign: 'center', alignSelf: 'center', color: '#ff6666' }}>Rate Your Experience</Text>
-            <Text h3 h3Style={{ fontFamily: 'Papyrus', top: '35%', fontSize: 40, textAlign: "center", alignSelf: 'center', color: '#FF69B4' }}>Enjoy your day !</Text>
-
-            <Avatar
-                icon={{ name: 'home', color: '#aa1242' }}
-                size='large'
-                rounded
-                onPress={props.homeClicked}
-                overlayContainerStyle={{ bottom: '-550%', left: '230%', backgroundColor: 'white' }}
-            />
-
-            <AirbnbRating
-                reviews={["", "", "", "", ""]}
-                overlayContainerStyle={{ top: '20%' }}
-                defaultRating={0}
-            />
+            <Text h3 h3Style={{ fontFamily: 'Papyrus', top: '7%', fontSize: 40, textAlign: "center", alignSelf: 'center', color: '#043b82' }}>謝謝您的使用</Text>
+            <Text h4 h4Style={{ top: '15%', fontSize: 30, textAlign: 'center', alignSelf: 'center', color: '#ff6666' }}>請耐心等待</Text>
+            <Text h3 h3Style={{ fontFamily: 'Papyrus', top: '35%', fontSize: 30, textAlign: "center", alignSelf: 'center', color: '#043b82' }}>如有任何問題請聯繫客服</Text>
+            <Text h4 h4Style={{ fontFamily: 'Georgia', top: '37%', fontSize: 25, textAlign: "center", alignSelf: 'center', color: '#043b82' }}>02-12345678</Text>
+            <View style={{ top: '35%' }}>
+                <Text h3 h3Style={{ bottom: '-100%', fontSize: 60, left: '0%', alignSelf: 'center', color: '#043b82' }} onPress={props.orderClicked}>→</Text>
+            </View>
         </ThemeProvider>
     );
 
